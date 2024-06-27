@@ -1,0 +1,115 @@
+{
+  "UI": {
+    "title": "</Portfolio >",
+    "nav.experience": "Experience",
+    "nav.projects": "Projects",
+    "nav.about": "About Me",
+    "nav.contact": "Contact"
+  },
+  "ABOUT": {
+    "TITLE": "About ME",
+    "NAME": "Marcelo del Rio",
+    "CONTACT": {
+      "PHONE": "(786) 441 6565",
+      "EMAIL": "madelrio93@gmail.com",
+      "LOCATION": "Fort Lauderdale, Florida"
+    },
+    "SUMMARY": "Software engineer specializing in the development, deployment, and optimization of software. Proven ability to solve complex problems, communicate effectively, conduct independent research, and collaborate in team environments. Skilled in leveraging cutting-edge technologies to deliver high-quality software solutions."
+  },
+  "PORTFOLIO": {
+    "TITLE": "Experience",
+    "EXPERIENCE": [
+      {
+        "TITLE": "Senior Frontend Developer",
+        "COMPANY": "Frameware Corp",
+        "DATE_RANGE": "January 2022 - May 2024",
+        "PROJECT": "Unified Health Employee Portal",
+        "RESPONSIBILITIES": [
+          "Developed the landing page of the application, providing the first impression of the product to clients.",
+          "Contributed to the development of 60% of business modules.",
+          "Implemented application security through role management and route access via configuration, ensuring proper access to functionalities based on assigned permissions.",
+          "Integrated capture and management of notifications sent by AWS, enhancing user communication and responsiveness.",
+          "Created components and functionalities for file upload and download to AWS S3.",
+          "Assisted in bug fixing and library version migrations.",
+          "Promoted and shared development best practices and standards.",
+          "Collaborated on the design of new build-outs."
+        ],
+        "SKILLS": ["React", "Typescript", "Material-UI", "AWS Amplify", "REST"]
+      },
+      {
+        "TITLE": "Frontend Developer",
+        "COMPANY": "Hospital Hermanos Ameijeiras",
+        "DATE_RANGE": "July 2019 - January 2022",
+        "PROJECT": "Radiology Patient Turn Management System",
+        "RESPONSIBILITIES": [
+          "Developed all required functionalities and views, significantly enhancing client satisfaction and decision-making efficiency.",
+          "Developed the authentication, registration, and security systems.",
+          "Contributed to developing various components and views.",
+          "Implemented email alert notifications.",
+          "Assisted in bug fixing and system deployment on institutional servers."
+        ],
+        "SKILLS": [
+          "Apollo Client",
+          "React",
+          "Formik",
+          "Ant Design",
+          "Styled Components",
+          "REST"
+        ]
+      },
+      {
+        "TITLE": "Website Administration and Support",
+        "COMPANY": "CMHW",
+        "DATE_RANGE": "September 2017 - July 2019",
+        "RESPONSIBILITIES": [
+          "Managed web hosting.",
+          "Contributed to website performance optimization.",
+          "Assisted in implementing security measures.",
+          "Managed databases and resolved technical issues."
+        ],
+        "SKILLS": [
+          "Web Hosting",
+          "Website Optimization",
+          "Security Measures",
+          "Database Management",
+          "Technical Issue Resolution"
+        ]
+      }
+    ]
+  },
+  "PROYECTS": {
+    "TITLE": "PROYECTS"
+  },
+  "SKILLS": {
+    "TITLE": "SKILLS",
+    "METHODOLOGIES": ["Scrum", "XP"],
+    "PROGRAMMING_LANGUAGES": ["Typescript", "Java", "PHP"],
+    "FRAMEWORKS_AND_LIBRARIES": [
+      "React",
+      "React Native",
+      "NextJs",
+      "Astro",
+      "Vue",
+      "Node",
+      "Material Design",
+      "Bootstrap",
+      "Tailwind CSS",
+      "Ant Design",
+      "Material-UI",
+      "Headless UI",
+      "CSS",
+      "SASS",
+      "Styled-Components",
+      "GraphQL",
+      "ESLint",
+      "Prettier"
+    ],
+    "PLATFORMS": ["GitHub", "Bitbucket", "Trello", "Jira"]
+  },
+  "EDUCATION": {
+    "DEGREE": "Software Engineer",
+    "INSTITUTION": "University of Computer Sciences (UCI)",
+    "DATE_RANGE": "2012 - 2017",
+    "LOCATION": "Havana, Cuba"
+  }
+}
