@@ -1,10 +1,12 @@
 ---
+import ExperienceSection from "@components/experience/ExperienceSection.astro";
 import Iam from "@components/ui/Iam.astro";
-import { getI18n } from "@i18n/index";
-
-const translate = getI18n({ locale: Astro.currentLocale });
 ---
 
 <div>
-  <Iam />
+  <div class="mb-14 container">
+    <Iam />
+  </div>
+ 
+  <ExperienceSection />
 </div>

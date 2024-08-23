@@ -1,0 +1,97 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+  title: string;
+  company: string;
+  companyLogo?: string;
+  dateRange: string;
+  description: string;
+  skills: { logo: string; alt: string }[];
+  isLeftPosition?: boolean;
+}
+
+const {
+  title,
+  company,
+  companyLogo,
+  dateRange,
+  description,
+  skills,
+  isLeftPosition,
+} = Astro.props;
+---
+
+<div class:list={["relative flex", { "justify-end": isLeftPosition }]}>
+  <div
+    class:list={[
+      "p-3 md:p-8 border border-slate-200 dark:border-[#484848] w-full lg:w-[47%] rounded-md",
+      { "order-2": isLeftPosition },
+    ]}
+  >
+    <div class="flex flex-wrap gap-1">
+      <div class="flex-1 flex gap-3">
+        <Image
+          class="size-12"
+          src={"/" + (companyLogo ?? "no-img.png")}
+          alt="no-image"
+          width="50"
+          height="50"
+        />
+
+        <div class="flex-1 block min-w-40">
+          <div class="font-serif font-bold text-black dark:text-white text-lg">
+            {title}
+          </div>
+          <div class="uppercase">{company}</div>
+        </div>
+      </div>
+
+      <div
+        class="lg:hidden text-primary-light dark:text-primary-dark font-serif font-bold text-lg"
+      >
+        {dateRange}
+      </div>
+    </div>
+    <div class="mt-1 md:mt-5">
+      {description}
+    </div>
+
+    <div class="mt-4 flex gap-5">
+      {
+        skills.map((s) => (
+          <div class="group w-10 h-10 border-2 relative rounded-md border-slate-200 dark:border-[#484848] shadow-md hover:scale-110 hover:grayscale">
+            <span
+              class="group-hover:opacity-100 transition-opacity bg-gray-800 px-1 text-sm text-gray-100 rounded-md absolute left-1/2 
+    -translate-x-1/2 translate-y-full opacity-0 m-4 mx-auto w-fit"
+            >
+              {s.alt}
+            </span>
+            <Image
+              class="rounded-md absolute inset-0 m-auto"
+              src={"/" + s.logo}
+              alt={s.alt.toString()}
+              width="30"
+              height="30"
+            />
+          </div>
+        ))
+      }
+    </div>
+  </div>
+
+  <span
+    class="hidden lg:block w-5 h-5 rotate-45 border border-black z-10 dark:border-white absolute inset-0 m-auto"
+  ></span>
+  <span
+    class="hidden lg:block w-4 h-4 rotate-45 bg-black z-10 dark:bg-white absolute inset-0 m-auto"
+  ></span>
+
+  <div class="hidden lg:flex w-2/5 justify-center items-center">
+    <div
+      class="text-primary-light dark:text-primary-dark font-serif font-bold text-lg"
+    >
+      {dateRange}
+    </div>
+  </div>
+</div>

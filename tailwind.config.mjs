@@ -29,7 +29,7 @@ export default {
         dark: "#000000",
       },
       paper: {
-        light: "#ebebeb",
+        light: "#fbfbfb",
         dark: "#080808",
       },
       color: {

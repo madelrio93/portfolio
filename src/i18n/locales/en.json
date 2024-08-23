@@ -7,7 +7,7 @@
     "nav.contact": "Contact"
   },
   "ABOUT": {
-    "IAM": "I'm", 
+    "IAM": "I'm",
     "TITLE": "About ME",
     "NAME": "Marcelo del Rio",
     "CONTACT": {
@@ -23,8 +23,10 @@
       {
         "TITLE": "Senior Frontend Developer",
         "COMPANY": "Frameware Corp",
+        "COMPANY_LOGO": "frameware.jpg",
         "DATE_RANGE": "January 2022 - May 2024",
         "PROJECT": "Unified Health Employee Portal",
+        "SUMARY": "I contributed to 60% of the business modules, resolved bugs, promoted development best practices, and collaborated on new designs.",
         "RESPONSIBILITIES": [
           "Developed the landing page of the application, providing the first impression of the product to clients.",
           "Contributed to the development of 60% of business modules.",
@@ -35,13 +37,35 @@
           "Promoted and shared development best practices and standards.",
           "Collaborated on the design of new build-outs."
         ],
-        "SKILLS": ["React", "Typescript", "Material-UI", "AWS Amplify", "REST"]
+        "SKILLS": [
+          {
+            "logo": "react.png",
+            "alt": "React"
+          },
+          {
+            "logo": "ts.png",
+            "alt": "Typescript"
+          },
+          {
+            "logo": "mui.png",
+            "alt": "Material UI"
+          },
+          {
+            "logo": "aws.png",
+            "alt": "AWS Amplify"
+          },
+          {
+            "logo": "rest.png",
+            "alt": "REST"
+          }
+        ]
       },
       {
         "TITLE": "Frontend Developer",
         "COMPANY": "Hospital Hermanos Ameijeiras",
         "DATE_RANGE": "July 2019 - January 2022",
         "PROJECT": "Radiology Patient Turn Management System",
+        "SUMARY": "I developed all required functionalities and views, significantly enhancing client satisfaction and decision-making efficiency.",
         "RESPONSIBILITIES": [
           "Developed all required functionalities and views, significantly enhancing client satisfaction and decision-making efficiency.",
           "Developed the authentication, registration, and security systems.",
@@ -50,18 +74,37 @@
           "Assisted in bug fixing and system deployment on institutional servers."
         ],
         "SKILLS": [
-          "Apollo Client",
-          "React",
-          "Formik",
-          "Ant Design",
-          "Styled Components",
-          "REST"
+          {
+            "logo": "apollo.png",
+            "alt": "Apollo Client"
+          },
+          {
+            "logo": "react.png",
+            "alt": "React"
+          },
+          {
+            "logo": "formik.png",
+            "alt": "Formik"
+          },
+          {
+            "logo": "ant.png",
+            "alt": "Ant Desing"
+          },
+          {
+            "logo": "styled.png",
+            "alt": "Styled Components"
+          },
+          {
+            "logo": "rest.png",
+            "alt": "REST"
+          }
         ]
       },
       {
         "TITLE": "Website Administration and Support",
         "COMPANY": "CMHW",
         "DATE_RANGE": "September 2017 - July 2019",
+        "SUMARY": "Managed web hosting, optimized website performance, implemented security measures, and handled database management and technical issue resolution.",
         "RESPONSIBILITIES": [
           "Managed web hosting.",
           "Contributed to website performance optimization.",
@@ -69,11 +112,26 @@
           "Managed databases and resolved technical issues."
         ],
         "SKILLS": [
-          "Web Hosting",
-          "Website Optimization",
-          "Security Measures",
-          "Database Management",
-          "Technical Issue Resolution"
+          {
+            "logo": "hosting.png",
+            "alt": "Web Hosting"
+          },
+          {
+            "logo": "optimization.png",
+            "alt": "Website Optimization"
+          },
+          {
+            "logo": "security.png",
+            "alt": "Security Measures"
+          },
+          {
+            "logo": "db.png",
+            "alt": "Database Management"
+          },
+          {
+            "logo": "issue.jpg",
+            "alt": "Technical Issue Resolution"
+          }
         ]
       }
     ]

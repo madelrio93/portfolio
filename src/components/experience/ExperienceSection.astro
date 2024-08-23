@@ -1,0 +1,32 @@
+---
+import Section from "@components/Section.astro";
+import { getI18n } from "@i18n/index";
+import ExperienceItem from "./ExperienceItem.astro";
+
+const translate = getI18n({ locale: Astro.currentLocale });
+---
+
+<Section
+  id="experiences"
+  title={translate["UI"]["nav.experience"]}
+  bg="bg-paper-light dark:bg-paper-dark"
+>
+  <div class="relative flex flex-col gap-2">
+    {
+      translate["PORTFOLIO"]["EXPERIENCE"].map((exp, i) => (
+        <ExperienceItem
+          title={exp.TITLE}
+          company={exp.COMPANY}
+          companyLogo={exp.COMPANY_LOGO}
+          dateRange={exp.DATE_RANGE}
+          description={exp.SUMARY}
+          skills={exp.SKILLS}
+          isLeftPosition={i % 2 !== 0}
+        />
+      ))
+    }
+    <span
+      class="hidden lg:block w-0.5 h-full z-0 bg-slate-200 dark:bg-[#484848] absolute inset-0 m-auto"
+    ></span>
+  </div>
+</Section>
