@@ -1,0 +1,21 @@
+---
+import Section from "@components/Section.astro";
+import { getI18n } from "@i18n/index";
+import ProjectItem from "./ProjectItem.astro";
+
+const translate = getI18n({ locale: Astro.currentLocale });
+---
+
+<Section id="projects" title={translate["UI"]["nav.projects"]}>
+  {
+    translate["PROYECTS"].ITEMS.map((p) => (
+      <ProjectItem
+        title={p.TITLE}
+        description={p.DESCRIPTION}
+        tools={p.TOOLS}
+        codeLink={p.REPO}
+        previewLink={p.PREVIEW}
+      />
+    ))
+  }
+</Section>

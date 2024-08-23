@@ -137,7 +137,38 @@
     ]
   },
   "PROYECTS": {
-    "TITLE": "PROYECTS"
+    "TITLE": "PROYECTS",
+    "ITEMS": [
+      {
+        "TITLE": "Lorem ipsum dolor sit amet.",
+        "IMAGE": "",
+        "TOOLS": [
+          {
+            "logo": "react.png",
+            "alt": "React"
+          },
+          {
+            "logo": "ts.png",
+            "alt": "Typescript"
+          },
+          {
+            "logo": "mui.png",
+            "alt": "Material UI"
+          },
+          {
+            "logo": "aws.png",
+            "alt": "AWS Amplify"
+          },
+          {
+            "logo": "rest.png",
+            "alt": "REST"
+          }
+        ],
+        "DESCRIPTION": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+        "REPO": "a",
+        "PREVIEW": "a"
+      }
+    ]
   },
   "SKILLS": {
     "TITLE": "SKILLS",
