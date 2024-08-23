@@ -1,29 +1,10 @@
 ---
-import Header from "@components/ui/Header.astro";
-import Section from "@components/Section.astro";
-import Experience from "@components/Experience.astro";
+import Iam from "@components/ui/Iam.astro";
 import { getI18n } from "@i18n/index";
 
 const translate = getI18n({ locale: Astro.currentLocale });
 ---
 
-<div class="my-10 sm:mt-4">
-  <Header />
-
-  <Section id="experience" title={translate.PORTFOLIO.TITLE}>
-    <ul class="flex flex-col gap-2">
-      {
-        translate.PORTFOLIO.EXPERIENCE.map((item) => (
-          <li class="relative">
-            <Experience
-              title={item.TITLE}
-              dateRange={item.DATE_RANGE}
-              description={item.RESPONSIBILITIES.join(" ")}
-              skills={item.SKILLS}
-            />
-          </li>
-        ))
-      }
-    </ul>
-  </Section>
+<div>
+  <Iam />
 </div>

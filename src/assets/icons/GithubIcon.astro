@@ -1,13 +1,7 @@
----
-interface Props {
-  format: string;
-}
 
-const { format } = Astro.props;
----
 
 <svg
-  class={format}
+  {...Astro.props}
   viewBox="0 0 20 20"
 >
   <g transform="translate(-140.000000, -7559.000000)">

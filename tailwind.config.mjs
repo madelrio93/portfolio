@@ -40,7 +40,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ["IBM Plex Mono", ...defaultTheme.fontFamily.sans],
-        serif: ["Raleway Vaablrie", ...defaultTheme.fontFamily.serif],
+        serif: ["Raleway Variable", ...defaultTheme.fontFamily.serif],
       },
     },
   },
