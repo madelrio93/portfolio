@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.btn {
+  @apply bg-primary-dark text-black px-2 py-1 font-semibold rounded-sm hover:bg-primary-dark/80;
+}

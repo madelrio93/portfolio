@@ -1,7 +1,14 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from "@layouts/Layout.astro";
+import Home from "@components/pages/Home.astro";
+import { getI18n } from "@i18n/index";
+
+const translate = getI18n({ locale: Astro.currentLocale });
 ---
 
-<Layout title="Welcome to Astro.">
-	<div>Hello Word!!!</div>
+<Layout title={translate.UI.title}>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis fugiat,
+  autem necessitatibus iusto maxime pariatur enim dolor earum expedita
+  perspiciatis esse, reprehenderit similique error asperiores placeat
+  consequuntur ipsa atque officia?
 </Layout>

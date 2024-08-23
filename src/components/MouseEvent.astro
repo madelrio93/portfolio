@@ -1,0 +1,18 @@
+<div
+  id="mouse"
+  class="pointer-events-none absolute inset-0 z-30 transition duration-300"
+>
+</div>
+
+<script>
+  const element = document.getElementById("mouse");
+
+  if (element) {
+    document.addEventListener("mousemove", (ev: MouseEvent) => {
+      const x = ev.clientX + window.scrollX;
+      const y = ev.clientY + window.scrollY;
+
+      element.style.background = `radial-gradient(600px at ${x}px ${y}px, rgba(0, 151, 167, 0.20), transparent 90%)`;
+    });
+  }
+</script>

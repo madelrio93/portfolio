@@ -1,0 +1,35 @@
+---
+import MoonIcon from "@assets/icons/MoonIcon.astro";
+import SunIcon from "@assets/icons/SunIcon.astro";
+---
+
+<button id="theme-toggle-btn" class="relative">
+  <SunIcon
+    id="light"
+    class="theme-toggle-icon size-6 transition-all absolute inset-0 m-auto dark:hidden"
+  />
+  <MoonIcon
+    id="dark"
+    class="theme-toggle-icon absolute size-6 transition-all inset-0 m-auto hidden dark:block"
+  />
+</button>
+
+<script is:inline>
+  const root = document.documentElement;
+  let theme = localStorage.getItem("theme") || "dark";
+
+  const updateTheme = () => {
+    root.classList.toggle("light", theme === "light");
+    root.classList.toggle("dark", theme === "dark");
+  };
+
+  updateTheme();
+
+  document.getElementById("theme-toggle-btn").addEventListener("click", (e) => {
+    e.stopPropagation();
+
+    theme = theme === "dark" ? "light" : "dark";
+    localStorage.setItem("theme", theme);
+    updateTheme();
+  });
+</script>

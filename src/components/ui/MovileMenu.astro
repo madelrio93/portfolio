@@ -1,0 +1,62 @@
+---
+import MovilMenuIcon from "@assets/icons/MovilMenuIcon.astro";
+import { getI18n } from "@i18n/index";
+
+const translate = getI18n({ locale: Astro.currentLocale });
+---
+
+<button id="movile-menu-btn">
+  <MovilMenuIcon class="hover:stroke-primary-dark duration-500" />
+</button>
+
+<div
+  id="movile-menu"
+  class="hidden bg-paper-dark w-screen absolute left-0 top-16 bottom-0 h-full"
+>
+  <ul
+    class="font-medium flex flex-col p-4 md:p-0 rounded-lg bg-paper-dark md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 dark:bg-paper-800"
+  >
+    <li>
+      <a
+        href="#"
+        class="block py-2 px-3 rounded md:bg-transparent hover:bg-primary-dark hover:text-black duration-200"
+        >{translate.UI["nav.experience"]}</a
+      >
+    </li>
+    <li>
+      <a
+        href="#"
+        class="block py-2 px-3 rounded md:bg-transparent hover:bg-primary-dark hover:text-black duration-200"
+        >{translate.UI["nav.projects"]}</a
+      >
+    </li>
+    <li>
+      <a
+        href="#"
+        class="block py-2 px-3 rounded md:bg-transparent hover:bg-primary-dark hover:text-black duration-200"
+        >{translate.UI["nav.contact"]}</a
+      >
+    </li>
+    <li>
+      <a
+        href="#"
+        class="block py-2 px-3 rounded md:bg-transparent hover:bg-primary-dark hover:text-black duration-200"
+        >{translate.UI["nav.about"]}</a
+      >
+    </li>
+    <li>
+      <a
+        href="#"
+        class="block py-2 px-3 rounded md:bg-transparent hover:bg-primary-dark hover:text-black duration-200"
+        >Download CV</a
+      >
+    </li>
+  </ul>
+</div>
+
+<script is:inline>
+  const movileMenuPanel = document.getElementById("movile-menu");
+  document.getElementById("movile-menu-btn").addEventListener("click", () => {
+    movileMenuPanel.classList.toggle("hidden");
+  });
+</script>

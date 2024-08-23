@@ -1,0 +1,22 @@
+---
+import { getI18n } from "@i18n/index";
+
+const translate = getI18n({ locale: Astro.currentLocale });
+---
+
+<nav class="flex-1">
+  <ul class="flex gap-10 items-center justify-center">
+    <li class="text-primary-subtitle text-sm">
+      <a href="#experience">{translate.UI["nav.experience"]}</a>
+    </li>
+    <li class="text-primary-subtitle text-sm">
+      <a href="#projects">{translate.UI["nav.projects"]}</a>
+    </li>
+    <li class="text-primary-subtitle text-sm">
+      <a href="#about">{translate.UI["nav.about"]}</a>
+    </li>
+    <li class="text-primary-subtitle text-sm">
+      <a href="#contact">{translate.UI["nav.contact"]}</a>
+    </li>
+  </ul>
+</nav>

@@ -1,0 +1,73 @@
+---
+import { getI18n } from "@i18n/index";
+import MovileMenu from "./MovileMenu.astro";
+import Navbar from "./Navbar.astro";
+import ToggleTheme from "./ToggleTheme.astro";
+
+const translate = getI18n({ locale: Astro.currentLocale });
+---
+
+<header class="container mx-auto h-16 flex items-center">
+  <div class="font-sans font-bold text-black dark:text-white min-w-max">
+    {"</> Marcelo del Rio"}
+  </div>
+
+  <div class="hidden md:block flex-1">
+    <Navbar />
+  </div>
+
+  <div class="flex justify-end md:hidden flex-1">
+    <MovileMenu />
+  </div>
+
+  <div class="hidden md:flex items-center gap-10">
+    <ToggleTheme />
+    <button class="btn"> Download CV </button>
+  </div>
+</header>
+
+<!-- <header class="mb-16">
+  <div class="hidden md:flex items-center justify-between mt-16">
+    <Navbar />
+  </div>
+
+  <div class="mt-4 md:mt-20">
+    <div
+      class="text-white text-3xl sm:text-5xl uppercase font-extrabold
+    font-serif"
+      style={{ textShadow: "0px 4px 4px rgb(89, 79, 79, 97%)" }}
+    >
+      {`<${translate.ABOUT.NAME} />`}
+    </div>
+
+    <div class="text-primary-subtitle mt-2 md:mt-8 max-w-[700px]">
+      {translate.ABOUT.SUMMARY}
+    </div>
+  </div>
+
+  <div class="mt-4 md:mt-8">
+    <ul class="flex items-center gap-5">
+      <li>
+        <a href="#">
+          <GithubIcon
+            format="w-7 h-7 fill-primary-accent hover:fill-[#fff] transition duration-500"
+          />
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <LinkedinIcon
+            format="w-7 h-7 fill-primary-accent  hover:fill-[#fff] transition duration-500"
+          />
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <GmailIcon
+            format="w-8 h-8  fill-primary-accent  hover:fill-[#fff] transition duration-500"
+          />
+        </a>
+      </li>
+    </ul>
+  </div>
+</header> -->
