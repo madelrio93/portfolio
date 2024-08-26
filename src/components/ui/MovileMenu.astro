@@ -11,44 +11,38 @@ const translate = getI18n({ locale: Astro.currentLocale });
 
 <div
   id="movile-menu"
-  class="hidden bg-paper-dark w-screen absolute left-0 top-16 bottom-0 h-full"
+  class="absolute hidden h-screen left-0 right-0 top-16 bg-background-light dark:bg-background-dark transform transition duration-300"
 >
   <ul
-    class="font-medium flex flex-col p-4 md:p-0 rounded-lg bg-paper-dark md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 dark:bg-paper-800"
+    id="movile-menu-list"
+    class="bg-inherit font-medium flex flex-col p-4 md:p-0 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0"
   >
     <li>
       <a
-        href="#"
+        href="#experience"
         class="block py-2 px-3 rounded md:bg-transparent hover:bg-primary-dark hover:text-black duration-200"
         >{translate.UI["nav.experience"]}</a
       >
     </li>
     <li>
       <a
-        href="#"
+        href="#projects"
         class="block py-2 px-3 rounded md:bg-transparent hover:bg-primary-dark hover:text-black duration-200"
         >{translate.UI["nav.projects"]}</a
       >
     </li>
     <li>
       <a
-        href="#"
+        href="#about"
         class="block py-2 px-3 rounded md:bg-transparent hover:bg-primary-dark hover:text-black duration-200"
         >{translate.UI["nav.contact"]}</a
       >
     </li>
     <li>
       <a
-        href="#"
+        href="#about"
         class="block py-2 px-3 rounded md:bg-transparent hover:bg-primary-dark hover:text-black duration-200"
         >{translate.UI["nav.about"]}</a
-      >
-    </li>
-    <li>
-      <a
-        href="#"
-        class="block py-2 px-3 rounded md:bg-transparent hover:bg-primary-dark hover:text-black duration-200"
-        >Download CV</a
       >
     </li>
   </ul>
@@ -56,7 +50,18 @@ const translate = getI18n({ locale: Astro.currentLocale });
 
 <script is:inline>
   const movileMenuPanel = document.getElementById("movile-menu");
+  const movileMenuList = document.getElementById("movile-menu-list");
+
   document.getElementById("movile-menu-btn").addEventListener("click", () => {
-    movileMenuPanel.classList.toggle("hidden");
+    console.log("CLICK")
+    const isOpen = movileMenuPanel.classList.contains("!block");
+
+    movileMenuPanel.classList[isOpen ? "remove" : "add"]("!block")
+  });
+
+  movileMenuList.addEventListener("click", (event) => {
+    if (event.target.tagName === "A") {
+      movileMenuPanel.classList.remove("!block");
+    }
   });
 </script>

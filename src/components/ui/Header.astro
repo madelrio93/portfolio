@@ -1,73 +1,47 @@
 ---
-import { getI18n } from "@i18n/index";
 import MovileMenu from "./MovileMenu.astro";
 import Navbar from "./Navbar.astro";
 import ToggleTheme from "./ToggleTheme.astro";
-
-const translate = getI18n({ locale: Astro.currentLocale });
 ---
 
-<header class="container mx-auto h-16 flex items-center">
-  <div class="font-sans font-bold text-black dark:text-white min-w-max">
-    {"</> Marcelo del Rio"}
-  </div>
+<header
+  id="header"
+  class="sticky top-0 z-50 transition-all duration-300 h-16 bg-background-light dark:bg-background-dark"
+>
+  <div class="container mx-auto h-full flex items-center justify-between">
+    <div class="font-sans font-bold text-black dark:text-white min-w-max">
+      {"</> Marcelo del Rio"}
+    </div>
 
-  <div class="hidden md:block flex-1">
-    <Navbar />
-  </div>
+    <div class="hidden md:block flex-1">
+      <Navbar />
+    </div>
 
-  <div class="flex justify-end md:hidden flex-1">
-    <MovileMenu />
-  </div>
+    <div class="flex justify-end items-center gap-10">
+      <ToggleTheme />
 
-  <div class="hidden md:flex items-center gap-10">
-    <ToggleTheme />
-    <button class="btn"> Download CV </button>
+      <button class="btn hidden md:block"> Download CV </button>
+
+      <div class="flex md:hidden">
+        <MovileMenu />
+      </div>
+    </div>
   </div>
 </header>
 
-<!-- <header class="mb-16">
-  <div class="hidden md:flex items-center justify-between mt-16">
-    <Navbar />
-  </div>
+<script is:inline>
+  const headerElement = document.getElementById("header");
 
-  <div class="mt-4 md:mt-20">
-    <div
-      class="text-white text-3xl sm:text-5xl uppercase font-extrabold
-    font-serif"
-      style={{ textShadow: "0px 4px 4px rgb(89, 79, 79, 97%)" }}
-    >
-      {`<${translate.ABOUT.NAME} />`}
-    </div>
+  document.addEventListener("scroll", () => {
+    const scrollPosition = window.scrollY;
+    const innerWidth = window.innerWidth;
 
-    <div class="text-primary-subtitle mt-2 md:mt-8 max-w-[700px]">
-      {translate.ABOUT.SUMMARY}
-    </div>
-  </div>
-
-  <div class="mt-4 md:mt-8">
-    <ul class="flex items-center gap-5">
-      <li>
-        <a href="#">
-          <GithubIcon
-            format="w-7 h-7 fill-primary-accent hover:fill-[#fff] transition duration-500"
-          />
-        </a>
-      </li>
-      <li>
-        <a href="">
-          <LinkedinIcon
-            format="w-7 h-7 fill-primary-accent  hover:fill-[#fff] transition duration-500"
-          />
-        </a>
-      </li>
-      <li>
-        <a href="">
-          <GmailIcon
-            format="w-8 h-8  fill-primary-accent  hover:fill-[#fff] transition duration-500"
-          />
-        </a>
-      </li>
-    </ul>
-  </div>
-</header> -->
+    if (scrollPosition > 50) {
+      headerElement.classList.add("h-20", "shadow-md");
+      headerElement.classList.remove("h-16");
+    } else {
+      headerElement.classList.add("h-16");
+      headerElement.classList.remove("h-20", "shadow-md");
+    }
+  });
+</script>
