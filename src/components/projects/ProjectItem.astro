@@ -16,7 +16,7 @@ const { title, tools, image, description, codeLink, previewLink } = Astro.props;
 ---
 
 <div
-  class="flex flex-wrap gap-5 md:gap-0 bg-paper-dark  p-0 md:p-8 border border-slate-200 dark:border-[#484848] space-x-5 rounded"
+  class="flex flex-wrap gap-5 md:gap-0 bg-paper-light dark:bg-paper-dark p-0 md:p-8 border border-slate-200 dark:border-[#484848] space-x-5 rounded"
 >
   <div class="w-2/5 p-4 md:p-0">
     <Image
@@ -60,7 +60,7 @@ const { title, tools, image, description, codeLink, previewLink } = Astro.props;
     </div>
     <div class="mt-4">
       <ul class="flex gap-5">
-        <li class="bg-gray-900 hover:bg-primary-dark px-4 py-2 rounded-md">
+        <li class="bg-slate-200 dark:bg-gray-900 hover:bg-primary-dark px-4 py-2 rounded-md">
           <a class="flex gap-2" href={codeLink} target="_blank">
             <GithubIcon class="fill-black dark:fill-white size-6" />
             Code
@@ -68,7 +68,7 @@ const { title, tools, image, description, codeLink, previewLink } = Astro.props;
         </li>
         {
           previewLink && (
-            <li class="bg-gray-900 hover:bg-primary-dark px-4 py-2 rounded-md">
+            <li class="bg-slate-200 dark:bg-gray-900 hover:bg-primary-dark px-4 py-2 rounded-md">
               <a class="flex gap-2" href={previewLink}>
                 <LinkIcon class="fill-black dark:fill-white size-4" />
                 Preview

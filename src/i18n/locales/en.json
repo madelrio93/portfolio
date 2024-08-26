@@ -175,24 +175,62 @@
     "METHODOLOGIES": ["Scrum", "XP"],
     "PROGRAMMING_LANGUAGES": ["Typescript", "Java", "PHP"],
     "FRAMEWORKS_AND_LIBRARIES": [
-      "React",
-      "React Native",
-      "NextJs",
-      "Astro",
-      "Vue",
-      "Node",
-      "Material Design",
-      "Bootstrap",
-      "Tailwind CSS",
-      "Ant Design",
-      "Material-UI",
-      "Headless UI",
-      "CSS",
-      "SASS",
-      "Styled-Components",
-      "GraphQL",
-      "ESLint",
-      "Prettier"
+      {
+        "name": "React",
+        "icon": "react.png"
+      },
+      {
+        "name": "React Native",
+        "icon": "reactnative.png"
+      },
+      {
+        "name": "NextJs",
+        "icon": "next.png"
+      },
+      {
+        "name": "Angular",
+        "icon": "angular.png"
+      },
+      {
+        "name": "Astro",
+        "icon": "astro.png"
+      },
+      {
+        "name": "Node",
+        "icon": "node.png"
+      },
+      {
+        "name": "GraphQL",
+        "icon": "graphQL.png"
+      },
+      {
+        "name": "Material UI",
+        "icon": "mui.png"
+      },
+      {
+        "name": "Bootstrap",
+        "icon": "bootstrap.png"
+      },
+      {
+        "name": "Tailwind",
+        "icon": "tailwind.png"
+      },
+      {
+        "name": "Ant Design",
+        "icon": "ant.png"
+      },
+      {
+        "name": "CSS",
+        "icon": "css.png"
+      },
+      {
+        "name": "SASS",
+        "icon": "sass.png"
+      },
+      {
+        "name": "Styled-Components",
+        "icon": "styled.png"
+      }
     ],
     "PLATFORMS": ["GitHub", "Bitbucket", "Trello", "Jira"]
   },

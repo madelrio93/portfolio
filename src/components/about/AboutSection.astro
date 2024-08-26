@@ -1,0 +1,72 @@
+---
+import Section from "@components/Section.astro";
+import { getI18n } from "@i18n/index";
+import { Image } from "astro:assets";
+
+const translate = getI18n({ locale: Astro.currentLocale });
+---
+
+<Section
+  id="about"
+  title={translate["UI"]["nav.about"]}
+  bg="bg-paper-light dark:bg-paper-dark"
+>
+  <div>
+    <p>
+      I am Marcelo del Rio, a dedicated software engineer with a focus on
+      frontend development. I hold a Bachelor of Science in Informatics from the
+      University of Informatics Science in Havana, Cuba, which provided me with
+      a strong foundation in software engineering principles. Since graduating,
+      I’ve accumulated extensive experience in building and optimizing web
+      applications across various industries, particularly in healthcare and
+      technical systems.
+    </p>
+
+    <p class="mt-2">
+      Throughout my career, I’ve consistently delivered high-quality software
+      solutions by leveraging modern JavaScript frameworks like React, alongside
+      AWS services such as AWS Amplify. My most recent role as a Senior Frontend
+      Developer at Frameware Corp involved leading the development of key
+      components for a Unified Health Employee Portal, significantly enhancing
+      user experience and ensuring secure data management. My work is
+      characterized by a blend of technical expertise, attention to detail, and
+      a commitment to using best practices.
+    </p>
+
+    <p class="mt-2">
+      I am passionate about solving complex problems and staying at the
+      forefront of technological advancements. My approach to software
+      development is both creative and methodical, ensuring that every project I
+      undertake meets the highest standards of performance and usability. I am
+      eager to bring my skills and experience to new challenges where I can
+      continue to contribute to impactful software solutions.
+    </p>
+  </div>
+
+  <div class="mt-10">
+    <h2 class="font-extrabold font-serif text-lg">
+      {translate.SKILLS.TITLE}
+    </h2>
+
+    <div>
+      <div class="mt-2 grid grid-cols-[repeat(auto-fill,minmax(150px,1fr))] flex-wrap gap-5">
+        {
+          translate["SKILLS"]["FRAMEWORKS_AND_LIBRARIES"].map((s) => (
+            <div class="w-fit flex items-center gap-2">
+              <div class="group w-10 h-10 border-2 relative rounded-md border-slate-200 dark:border-[#484848] shadow-md hover:scale-110 hover:grayscale">
+                <Image
+                  class="rounded-md absolute inset-0 m-auto"
+                  src={"/" + s.icon}
+                  alt={s.name.toString()}
+                  width="30"
+                  height="30"
+                />
+              </div>
+              <div class="w-max font-serif dark:text-white font-semibold">{s.name}</div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</Section>
