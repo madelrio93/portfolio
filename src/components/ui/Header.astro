@@ -2,6 +2,9 @@
 import MovileMenu from "./MovileMenu.astro";
 import Navbar from "./Navbar.astro";
 import ToggleTheme from "./ToggleTheme.astro";
+import { getI18n } from "@i18n/index";
+
+const translate = getI18n({ locale: Astro.currentLocale });
 ---
 
 <header
@@ -10,7 +13,7 @@ import ToggleTheme from "./ToggleTheme.astro";
 >
   <div class="container mx-auto h-full flex items-center justify-between">
     <div class="font-sans font-bold text-black dark:text-white min-w-max">
-      {"</> Marcelo del Rio"}
+      {translate['UI']['title']}
     </div>
 
     <div class="hidden md:block flex-1">
@@ -20,7 +23,12 @@ import ToggleTheme from "./ToggleTheme.astro";
     <div class="flex justify-end items-center gap-10">
       <ToggleTheme />
 
-      <button class="btn hidden md:block"> Download CV </button>
+      <a
+        href={translate['ABOUT']['CONTACT']['CV']}
+        class="btn hidden md:block"
+      >
+        {translate["UI"]["button.cv"]}
+      </a>
 
       <div class="flex md:hidden">
         <MovileMenu />

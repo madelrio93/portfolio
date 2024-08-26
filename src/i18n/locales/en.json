@@ -4,7 +4,8 @@
     "nav.experience": "Experience",
     "nav.projects": "Projects",
     "nav.about": "About Me",
-    "nav.contact": "Contact"
+    "nav.contact": "Contact",
+    "button.cv": "Download CV"
   },
   "ABOUT": {
     "IAM": "I'm",
@@ -13,7 +14,8 @@
     "CONTACT": {
       "PHONE": "(786) 441 6565",
       "EMAIL": "madelrio93@gmail.com",
-      "LOCATION": "Fort Lauderdale, Florida"
+      "LOCATION": "Fort Lauderdale, Florida",
+      "CV": "https://drive.google.com/uc?export=download&id=1YHsdGwVLb4Gox8_d8VEIIP-f5OgNGmVd"
     },
     "SUMMARY": "Software engineer specializing in the development, deployment, and optimization of software. Proven ability to solve complex problems, communicate effectively, conduct independent research, and collaborate in team environments. Skilled in leveraging cutting-edge technologies to deliver high-quality software solutions."
   },
