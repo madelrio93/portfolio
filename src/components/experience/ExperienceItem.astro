@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 
 interface Props {
+  id: string;
   title: string;
   company: string;
   companyLogo?: string;
@@ -12,6 +13,7 @@ interface Props {
 }
 
 const {
+  id,
   title,
   company,
   companyLogo,
@@ -34,7 +36,8 @@ const {
         <Image
           class="size-12"
           src={"/" + (companyLogo ?? "no-img.png")}
-          alt="no-image"
+          alt={company}
+          loading="eager"
           width="50"
           height="50"
         />
@@ -71,12 +74,19 @@ const {
               class="rounded-md absolute inset-0 m-auto"
               src={"/" + s.logo}
               alt={s.alt.toString()}
+              loading="eager"
               width="30"
               height="30"
             />
           </div>
         ))
       }
+    </div>
+    <div class="mt-5">
+      <a
+        class="text-primary-light dark:text-primary-dark hover:text-primary-dark/70 hover:dark:text-primary-dark/70"
+        href={`/experience/${id}`}>See more...</a
+      >
     </div>
   </div>
 

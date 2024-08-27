@@ -2,11 +2,13 @@
 import GithubIcon from "@assets/icons/GithubIcon.astro";
 import LinkedinIcon from "@assets/icons/LinkedinIcon.astro";
 import { getI18n } from "@i18n/index";
+import SocialProfile from "./SocialProfile.astro";
 
 const translate = getI18n({ locale: Astro.currentLocale });
 ---
 
 <div
+  id="home"
   class="w-full sm:w-3/4 mt-24 md:mt-0 h-3/4 md:h-[calc(100vh-350px)] flex flex-col justify-center"
 >
   <h1
@@ -19,24 +21,6 @@ const translate = getI18n({ locale: Astro.currentLocale });
     {translate["ABOUT"].SUMMARY}
   </p>
   <div class="mt-7">
-    <ul class="flex gap-5">
-      <li>
-        <a href="https://github.com/madelrio93" target="_blank">
-          <GithubIcon
-            class="fill-black dark:fill-white size-6 hover:fill-primary-light dark:hover:fill-primary-dark duration-500"
-          />
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://www.linkedin.com/in/marcelo-del-rio-b912b622b/"
-          target="_blank"
-        >
-          <LinkedinIcon
-            class="fill-black dark:fill-white size-6 hover:fill-primary-light dark:hover:fill-primary-dark duration-500"
-          />
-        </a>
-      </li>
-    </ul>
+    <SocialProfile />
   </div>
 </div>

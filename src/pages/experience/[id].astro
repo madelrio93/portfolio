@@ -1,0 +1,98 @@
+---
+import Layout from "@layouts/Layout.astro";
+import { PORTFOLIO } from "@i18n/locales/en.json";
+import Breadcrumbs from "@components/ui/Breadcrumbs.astro";
+import { Image } from "astro:assets";
+
+export async function getStaticPaths() {
+  return PORTFOLIO["EXPERIENCE"].map((exp) => ({
+    params: { id: exp.ID },
+    props: { ...exp },
+  }));
+}
+
+export const prerender = true;
+
+const { TITLE, COMPANY, SKILLS, DATE_RANGE, RESPONSIBILITIES, COMPANY_LOGO } =
+  Astro.props;
+---
+
+<Layout title={`</> ${TITLE}`}>
+  <div class="container min-h-[calc(100vh-11.25rem)]">
+    <Breadcrumbs paths={["Experience", TITLE]} />
+
+    <section class="mt-16">
+      <div class="flex">
+        <div class="flex-1">
+          <div class="text-primary-light dark:text-primary-dark">
+            {DATE_RANGE}
+          </div>
+          <h1
+            class="text-black dark:text-white font-extrabold font-serif text-2xl sm:text-3xl md:text-4xl"
+          >
+            {TITLE}
+          </h1>
+
+          <div class="flex items-center gap-2">
+            <div class="block md:hidden">
+              <Image
+                class="size-8 rounded-md"
+                src={"/" + (COMPANY_LOGO ?? "no-img.png")}
+                alt={COMPANY}
+                loading="eager"
+                width="50"
+                height="50"
+              />
+            </div>
+            <p class="text-xl md:text-2xl font-serif uppercase font-bold">
+              {COMPANY}
+            </p>
+          </div>
+
+          <div class="mt-5 flex gap-5">
+            {
+              SKILLS.map((s) => (
+                <div class="group w-10 h-10 border-2 relative rounded-md border-slate-200 dark:border-[#484848] shadow-md hover:scale-110 hover:grayscale">
+                  <span
+                    class="group-hover:opacity-100 transition-opacity bg-gray-800 px-1 text-sm text-gray-100 rounded-md absolute left-1/2 
+-translate-x-1/2 translate-y-full opacity-0 m-4 mx-auto w-fit"
+                  >
+                    {s.alt}
+                  </span>
+                  <Image
+                    class="rounded-md absolute inset-0 m-auto"
+                    src={"/" + s.logo}
+                    alt={s.alt.toString()}
+                    width="30"
+                    height="30"
+                  />
+                </div>
+              ))
+            }
+          </div>
+        </div>
+
+        <div class="hidden md:flex items-center">
+          <Image
+            class="size-40 rounded-md"
+            src={"/" + (COMPANY_LOGO ?? "no-img.png")}
+            alt={COMPANY}
+            loading="eager"
+            width="50"
+            height="50"
+          />
+        </div>
+      </div>
+
+      <div class="mt-10 px-4">
+        <ul>
+          {
+            RESPONSIBILITIES.map((r) => (
+              <li class="decoration-slice list-disc text-sm md:text-lg">{r}</li>
+            ))
+          }
+        </ul>
+      </div>
+    </section>
+  </div>
+</Layout>

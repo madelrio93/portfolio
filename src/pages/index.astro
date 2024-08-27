@@ -1,11 +1,22 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import Home from "@components/pages/Home.astro";
 import { getI18n } from "@i18n/index";
+import Iam from "@components/ui/Iam.astro";
+import ExperienceSection from "@components/experience/ExperienceSection.astro";
+import ProjectSection from "@components/projects/ProjectSection.astro";
+import AboutSection from "@components/about/AboutSection.astro";
 
 const translate = getI18n({ locale: Astro.currentLocale });
 ---
 
 <Layout title={translate.UI.title}>
-  <Home />
+  <div>
+    <div class="mb-14 container">
+      <Iam />
+    </div>
+
+    <ExperienceSection />
+    <ProjectSection />
+    <AboutSection />
+  </div>
 </Layout>

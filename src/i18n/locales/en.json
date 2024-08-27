@@ -1,6 +1,7 @@
 {
   "UI": {
     "title": "</> Marcelo del Rio",
+    "nav.home": "Home",
     "nav.experience": "Experience",
     "nav.projects": "Projects",
     "nav.about": "About Me",
@@ -23,6 +24,7 @@
     "TITLE": "Experience",
     "EXPERIENCE": [
       {
+        "ID": "12345678",
         "TITLE": "Senior Frontend Developer",
         "COMPANY": "Frameware Corp",
         "COMPANY_LOGO": "frameware.jpg",
@@ -63,6 +65,7 @@
         ]
       },
       {
+        "ID": "23456781",
         "TITLE": "Frontend Developer",
         "COMPANY": "Hospital Hermanos Ameijeiras",
         "DATE_RANGE": "July 2019 - January 2022",
@@ -103,6 +106,7 @@
         ]
       },
       {
+        "ID": "34567812",
         "TITLE": "Website Administration and Support",
         "COMPANY": "CMHW",
         "DATE_RANGE": "September 2017 - July 2019",

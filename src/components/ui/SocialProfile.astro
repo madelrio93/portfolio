@@ -2,12 +2,15 @@
 import GithubIcon from "@assets/icons/GithubIcon.astro";
 import LinkedinIcon from "@assets/icons/LinkedinIcon.astro";
 import EmailIcon from "@assets/icons/EmailIcon.astro";
-
 ---
 
 <ul class="flex gap-5">
   <li>
-    <a href="https://github.com/madelrio93" target="_blank">
+    <a
+      href="https://github.com/madelrio93"
+      target="_blank"
+      aria-label="Github"
+    >
       <GithubIcon
         class="fill-black dark:fill-white size-6 hover:fill-primary-light dark:hover:fill-primary-dark duration-500"
       />
@@ -17,6 +20,7 @@ import EmailIcon from "@assets/icons/EmailIcon.astro";
     <a
       href="https://www.linkedin.com/in/marcelo-del-rio-b912b622b/"
       target="_blank"
+      aria-label="Linkedin"
     >
       <LinkedinIcon
         class="fill-black dark:fill-white size-6 hover:fill-primary-light dark:hover:fill-primary-dark duration-500"
@@ -27,6 +31,7 @@ import EmailIcon from "@assets/icons/EmailIcon.astro";
     <a
       href="https://www.linkedin.com/in/marcelo-del-rio-b912b622b/"
       target="_blank"
+      aria-label="Email"
     >
       <EmailIcon
         class="fill-black dark:fill-white size-6 hover:fill-primary-light dark:hover:fill-primary-dark duration-500"

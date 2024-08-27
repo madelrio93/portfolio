@@ -22,7 +22,8 @@ const { title, tools, image, description, codeLink, previewLink } = Astro.props;
     <Image
       class="bg-cover h-fit w-full"
       src={"/" + (image ?? "no-img.png")}
-      alt="no-image"
+      alt={title}
+      loading="lazy"
       width="100"
       height="100"
     />
@@ -47,6 +48,7 @@ const { title, tools, image, description, codeLink, previewLink } = Astro.props;
                 class="rounded-md absolute inset-0 m-auto"
                 src={"/" + s.logo}
                 alt={s.alt.toString()}
+                loading="eager"
                 width="30"
                 height="30"
               />

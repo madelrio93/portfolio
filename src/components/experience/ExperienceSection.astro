@@ -15,6 +15,7 @@ const translate = getI18n({ locale: Astro.currentLocale });
     {
       translate["PORTFOLIO"]["EXPERIENCE"].map((exp, i) => (
         <ExperienceItem
+          id={exp.ID}
           title={exp.TITLE}
           company={exp.COMPANY}
           companyLogo={exp.COMPANY_LOGO}

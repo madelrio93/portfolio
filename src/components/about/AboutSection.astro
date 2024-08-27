@@ -49,7 +49,9 @@ const translate = getI18n({ locale: Astro.currentLocale });
     </h2>
 
     <div>
-      <div class="mt-2 grid grid-cols-[repeat(auto-fill,minmax(150px,1fr))] flex-wrap gap-5">
+      <div
+        class="mt-2 grid grid-cols-[repeat(auto-fill,minmax(150px,1fr))] flex-wrap gap-5"
+      >
         {
           translate["SKILLS"]["FRAMEWORKS_AND_LIBRARIES"].map((s) => (
             <div class="w-fit flex items-center gap-2">
@@ -58,11 +60,14 @@ const translate = getI18n({ locale: Astro.currentLocale });
                   class="rounded-md absolute inset-0 m-auto"
                   src={"/" + s.icon}
                   alt={s.name.toString()}
+                  loading="eager"
                   width="30"
                   height="30"
                 />
               </div>
-              <p class="w-max font-serif dark:text-white font-semibold">{s.name}</p>
+              <p class="w-max font-serif dark:text-white font-semibold">
+                {s.name}
+              </p>
             </div>
           ))
         }
