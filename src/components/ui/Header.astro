@@ -40,16 +40,23 @@ const translate = getI18n({ locale: Astro.currentLocale });
 <script is:inline>
   const headerElement = document.getElementById("header");
 
-  document.addEventListener("scroll", () => {
+  const handleOnScroll = (element) => () => {
     const scrollPosition = window.scrollY;
-    const innerWidth = window.innerWidth;
 
     if (scrollPosition > 50) {
-      headerElement.classList.add("h-20", "shadow-md");
-      headerElement.classList.remove("h-16");
+      element.classList.add("h-20", "shadow-md");
+      element.classList.remove("h-16");
     } else {
-      headerElement.classList.add("h-16");
-      headerElement.classList.remove("h-20", "shadow-md");
+      element.classList.add("h-16");
+      element.classList.remove("h-20", "shadow-md");
     }
+  };
+
+  document.addEventListener("scroll", handleOnScroll(headerElement));
+
+  document.addEventListener("astro:after-swap", (ev) => {
+    const newHeaderElement = ev.target.getElementById("header");
+
+    ev.target.addEventListener("scroll", handleOnScroll(newHeaderElement));
   });
 </script>

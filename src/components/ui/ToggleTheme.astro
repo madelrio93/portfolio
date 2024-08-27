@@ -18,18 +18,32 @@ import SunIcon from "@assets/icons/SunIcon.astro";
   const root = document.documentElement;
   let theme = localStorage.getItem("theme") || "dark";
 
-  const updateTheme = () => {
+  const updateTheme = (doc) => {
     root.classList.toggle("light", theme === "light");
     root.classList.toggle("dark", theme === "dark");
   };
 
   updateTheme();
 
-  document.getElementById("theme-toggle-btn").addEventListener("click", (e) => {
+  const handleThemeToggle = (e) => {
     e.stopPropagation();
-
     theme = theme === "dark" ? "light" : "dark";
     localStorage.setItem("theme", theme);
     updateTheme();
+  };
+
+  document
+    .getElementById("theme-toggle-btn")
+    .addEventListener("click", handleThemeToggle);
+
+  document.addEventListener("astro:before-swap", (ev) => {
+    let theme = localStorage.theme ?? "dark";
+    ev.newDocument.documentElement.classList.add(theme);
+  });
+
+  document.addEventListener("astro:after-swap", () => {
+    document
+      .getElementById("theme-toggle-btn")
+      .addEventListener("click", handleThemeToggle);
   });
 </script>

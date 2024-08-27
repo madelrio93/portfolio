@@ -1,4 +1,6 @@
 ---
+import { slide } from 'astro:transitions';
+
 interface Props {
   paths: string[];
 }
@@ -6,7 +8,7 @@ interface Props {
 const { paths } = Astro.props;
 ---
 
-<ol class="flex flex-wrap items-center whitespace-nowrap">
+<ol class="flex flex-wrap items-center whitespace-nowrap" transition:animate={slide({ duration: "0.5s" })}>
   <li class="inline-flex items-center">
     <a
       class="flex items-center text-sm text-gray-500 dark:text-neutral-500 hover:text-primary-dark hover:dark:text-primary-dark underline"
