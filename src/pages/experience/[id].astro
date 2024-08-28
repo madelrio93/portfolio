@@ -1,9 +1,9 @@
 ---
-import Layout from "@layouts/Layout.astro";
-import { PORTFOLIO } from "@i18n/locales/en.json";
 import Breadcrumbs from "@components/ui/Breadcrumbs.astro";
+import { PORTFOLIO } from "@i18n/locales/en.json";
+import Layout from "@layouts/Layout.astro";
 import { Image } from "astro:assets";
-import { fade, slide } from "astro:transitions";
+import { fade } from "astro:transitions";
 
 export async function getStaticPaths() {
   return PORTFOLIO["EXPERIENCE"].map((exp) => ({
@@ -11,25 +11,6 @@ export async function getStaticPaths() {
     props: { ...exp },
   }));
 }
-
-const anim = {
-  old: {
-    name: "bump",
-    duration: "0.5s",
-    easing: "ease-in",
-    direction: "reverse",
-  },
-  new: {
-    name: "bump",
-    duration: "0.5s",
-    easing: "ease-in-out",
-  },
-};
-
-const customTransition = {
-  forwards: anim,
-  backwards: anim,
-};
 
 export const prerender = true;
 
@@ -41,15 +22,16 @@ const {
   DATE_RANGE,
   RESPONSIBILITIES,
   COMPANY_LOGO,
+  SUMARY,
 } = Astro.props;
 ---
 
-<Layout title={`</> ${TITLE}`} transition:name={ID}>
+<Layout title={`</> ${TITLE}`} transition:name={ID} description={SUMARY}>
   <div
     class="container min-h-[calc(100vh-11.25rem)]"
     transition:animate={fade({ duration: "0.4s" })}
   >
-    <Breadcrumbs paths={["Experience", TITLE]}  />
+    <Breadcrumbs paths={["Experience", TITLE]} />
 
     <section
       class="mt-16"
@@ -113,7 +95,10 @@ const {
           </div>
         </div>
 
-        <div class="hidden md:flex items-center" transition:animate={fade({ duration: "1s" })}>
+        <div
+          class="hidden md:flex items-center"
+          transition:animate={fade({ duration: "1s" })}
+        >
           <Image
             class="size-40 rounded-md"
             src={"/" + (COMPANY_LOGO ?? "no-img.png")}

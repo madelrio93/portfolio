@@ -1,5 +1,5 @@
 import defaultTheme from "tailwindcss/defaultTheme";
-import colors, { slate } from "tailwindcss/colors";
+import colors from "tailwindcss/colors";
 import colors from "tailwindcss/colors";
 
 /** @type {import('tailwindcss').Config} */

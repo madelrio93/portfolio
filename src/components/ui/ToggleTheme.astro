@@ -18,7 +18,7 @@ import SunIcon from "@assets/icons/SunIcon.astro";
   const root = document.documentElement;
   let theme = localStorage.getItem("theme") || "dark";
 
-  const updateTheme = (doc) => {
+  const updateTheme = () => {
     root.classList.toggle("light", theme === "light");
     root.classList.toggle("dark", theme === "dark");
   };

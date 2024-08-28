@@ -18,7 +18,8 @@
       "LOCATION": "Fort Lauderdale, Florida",
       "CV": "https://drive.google.com/uc?export=download&id=1YHsdGwVLb4Gox8_d8VEIIP-f5OgNGmVd"
     },
-    "SUMMARY": "Software engineer specializing in the development, deployment, and optimization of software. Proven ability to solve complex problems, communicate effectively, conduct independent research, and collaborate in team environments. Skilled in leveraging cutting-edge technologies to deliver high-quality software solutions."
+    "SUMMARY": "Software engineer specializing in the development, deployment, and optimization of software. Proven ability to solve complex problems, communicate effectively, conduct independent research, and collaborate in team environments. Skilled in leveraging cutting-edge technologies to deliver high-quality software solutions.",
+    "DESCRIPTION": "I am Marcelo del Rio, a software engineer specializing in frontend development with a strong background in software engineering principles from the University of Informatics Science in Havana, Cuba. I have extensive experience in developing and optimizing web applications, particularly in healthcare and technical systems. At Frameware Corp, I led the development of a Unified Health Employee Portal, enhancing user experience and data security using React and AWS Amplify. I am passionate about solving complex problems and committed to delivering high-performance, user-friendly software solutions."
   },
   "PORTFOLIO": {
     "TITLE": "Experience",
@@ -147,63 +148,48 @@
     "ITEMS": [
       {
         "ID": "12345678",
-        "TITLE": "Lorem ipsum dolor sit amet.",
+        "TITLE": "Translate Api (backend)",
+        "IMAGE": "translate-api-b.png",
         "TOOLS": [
           {
-            "logo": "react.png",
-            "alt": "React"
+            "logo": "awslambda.png",
+            "alt": "AWS Lambda"
+          },
+          {
+            "logo": "ddb.png",
+            "alt": "Amazon DynamoDB"
+          },
+          {
+            "logo": "cognito.png",
+            "alt": "AWS Cognito"
+          },
+          {
+            "logo": "translate.png",
+            "alt": "AWS Translate"
+          },
+          {
+            "logo": "serverless.png",
+            "alt": "Serverless Framework"
+          },
+          {
+            "logo": "node.png",
+            "alt": "Node.js"
           },
           {
             "logo": "ts.png",
-            "alt": "Typescript"
-          },
-          {
-            "logo": "mui.png",
-            "alt": "Material UI"
-          },
-          {
-            "logo": "aws.png",
-            "alt": "AWS Amplify"
-          },
-          {
-            "logo": "rest.png",
-            "alt": "REST"
+            "alt": "TypeScript"
           }
         ],
-        "SUMARY": "I contributed to 60% of the business modules, resolved bugs, promoted development best practices, and collaborated on new designs.",
-        "DESCRIPTION": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ullam odit nam harum reprehenderit architecto earum, ab exercitationem. Reprehenderit error quaerat laudantium dicta incidunt. Nisi aperiam numquam sit. Voluptatem itaque, temporibus nobis quibusdam molestias magnam. Beatae laboriosam error voluptatibus saepe vero rerum odit cumque numquam, dolore, magni sapiente recusandae cum ad dolor soluta, omnis facilis sint expedita animi eos iste magnam autem sequi. Dignissimos magnam hic nihil magni explicabo, ex aspernatur sed. Molestias nam, consectetur corporis est dicta asperiores quidem et saepe numquam nihil cum, eligendi alias iusto consequuntur voluptatibus maiores laudantium adipisci itaque assumenda officia? Corporis optio magnam delectus maiores culpa voluptas ex, adipisci autem enim voluptatibus! Ratione temporibus illum cupiditate veritatis ipsum iure blanditiis eaque fugit error eum. Blanditiis eveniet illum saepe itaque harum facere natus dolor eligendi iste neque aliquam, modi quo quod animi rem ad, voluptatibus quam porro non reiciendis? Saepe recusandae, odit dolorum aperiam, nesciunt earum molestiae consequatur officia laudantium quod, inventore quidem? Temporibus omnis aut maxime nostrum suscipit nobis vero quasi perferendis laudantium officiis magnam accusamus voluptate obcaecati officia, similique natus magni eveniet ipsum. Soluta dolorum accusantium pariatur perferendis maiores corporis! A distinctio ab quae quis delectus. Neque, sed molestias veritatis officia culpa earum? ",
-        "REPO": "a",
-        "PREVIEW": "a"
-      },
-      {
-        "ID": "123456789",
-        "TITLE": "Lorem ipsum dolor sit amet.",
-        "TOOLS": [
-          {
-            "logo": "react.png",
-            "alt": "React"
-          },
-          {
-            "logo": "ts.png",
-            "alt": "Typescript"
-          },
-          {
-            "logo": "mui.png",
-            "alt": "Material UI"
-          },
-          {
-            "logo": "aws.png",
-            "alt": "AWS Amplify"
-          },
-          {
-            "logo": "rest.png",
-            "alt": "REST"
-          }
+        "SUMARY": "A RESTful API for managing translations and user favorites.",
+        "DESCRIPTION": "A RESTful API for managing translations and user favorites. This project provides an API for translating text and saving favorite translations. Users can register, log in, and manage their favorite translations using this API. ",
+        "FEATURES": [
+          "User registration and authentication with Cognito",
+          "Text translation using AWS Translate",
+          "Manage favorite translations",
+          "Secure endpoints with JWT authentication"
         ],
-        "SUMARY": "I contributed to 60% of the business modules, resolved bugs, promoted development best practices, and collaborated on new designs.",
-        "DESCRIPTION": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ullam odit nam harum reprehenderit architecto earum, ab exercitationem. Reprehenderit error quaerat laudantium dicta incidunt. Nisi aperiam numquam sit. Voluptatem itaque, temporibus nobis quibusdam molestias magnam. Beatae laboriosam error voluptatibus saepe vero rerum odit cumque numquam, dolore, magni sapiente recusandae cum ad dolor soluta, omnis facilis sint expedita animi eos iste magnam autem sequi. Dignissimos magnam hic nihil magni explicabo, ex aspernatur sed. Molestias nam, consectetur corporis est dicta asperiores quidem et saepe numquam nihil cum, eligendi alias iusto consequuntur voluptatibus maiores laudantium adipisci itaque assumenda officia? Corporis optio magnam delectus maiores culpa voluptas ex, adipisci autem enim voluptatibus! Ratione temporibus illum cupiditate veritatis ipsum iure blanditiis eaque fugit error eum. Blanditiis eveniet illum saepe itaque harum facere natus dolor eligendi iste neque aliquam, modi quo quod animi rem ad, voluptatibus quam porro non reiciendis? Saepe recusandae, odit dolorum aperiam, nesciunt earum molestiae consequatur officia laudantium quod, inventore quidem? Temporibus omnis aut maxime nostrum suscipit nobis vero quasi perferendis laudantium officiis magnam accusamus voluptate obcaecati officia, similique natus magni eveniet ipsum. Soluta dolorum accusantium pariatur perferendis maiores corporis! A distinctio ab quae quis delectus. Neque, sed molestias veritatis officia culpa earum? ",
-        "REPO": "a",
-        "PREVIEW": "a"
+        "REPO": "https://github.com/madelrio93/translate-api",
+        "PREVIEW": ""
       }
     ]
   },

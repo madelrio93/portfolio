@@ -16,10 +16,20 @@ export async function getStaticPaths() {
 
 export const prerender = true;
 
-const { ID, TITLE, DESCRIPTION, TOOLS, REPO, PREVIEW, IMAGE } = Astro.props;
+const {
+  ID,
+  TITLE,
+  DESCRIPTION,
+  TOOLS,
+  REPO,
+  PREVIEW,
+  IMAGE,
+  SUMARY,
+  FEATURES,
+} = Astro.props;
 ---
 
-<Layout title={`</> ${TITLE}`}>
+<Layout title={`</> ${TITLE}`} description={SUMARY}>
   <div
     class="container min-h-[calc(100vh-11.25rem)]"
     transition:animate={fade({ duration: "0.4s" })}
@@ -40,7 +50,7 @@ const { ID, TITLE, DESCRIPTION, TOOLS, REPO, PREVIEW, IMAGE } = Astro.props;
             <Image
               class="object-cover w-full max-h-96 rounded-md"
               transition:name={`${ID}-image`}
-              src={"/" + (IMAGE ?? "no-img.png")}
+              src={"/" + (IMAGE || "no-img.png")}
               alt={TITLE}
               loading="lazy"
               width="50"
@@ -56,7 +66,29 @@ const { ID, TITLE, DESCRIPTION, TOOLS, REPO, PREVIEW, IMAGE } = Astro.props;
               >
                 {TITLE}
               </h1>
-              <div class="mt-2 flex gap-5">
+              <div class="mt-4">
+                <ul class="flex gap-5">
+                  <li
+                    class="bg-slate-200 dark:bg-gray-900 hover:bg-primary-dark px-4 py-2 rounded-md"
+                  >
+                    <a class="flex gap-2" href={REPO} target="_blank">
+                      <GithubIcon class="fill-black dark:fill-white size-6" />
+                      Code
+                    </a>
+                  </li>
+                  {
+                    PREVIEW && (
+                      <li class="bg-slate-200 dark:bg-gray-900 hover:bg-primary-dark px-4 py-2 rounded-md">
+                        <a class="flex gap-2" href={PREVIEW}>
+                          <LinkIcon class="fill-black dark:fill-white size-4" />
+                          Preview
+                        </a>
+                      </li>
+                    )
+                  }
+                </ul>
+              </div>
+              <!-- <div class="mt-2 flex gap-5">
                 {
                   TOOLS.map((s) => (
                     <div class="group w-10 h-10 border-2 relative rounded-md border-slate-200 dark:border-[#484848] shadow-md hover:scale-110 hover:grayscale">
@@ -77,32 +109,57 @@ const { ID, TITLE, DESCRIPTION, TOOLS, REPO, PREVIEW, IMAGE } = Astro.props;
                     </div>
                   ))
                 }
-              </div>
+              </div> -->
               <div class="mt-3">
                 {DESCRIPTION}
               </div>
-            </div>
-            <div class="mt-4">
-              <ul class="flex gap-5">
-                <li
-                  class="bg-slate-200 dark:bg-gray-900 hover:bg-primary-dark px-4 py-2 rounded-md"
-                >
-                  <a class="flex gap-2" href={REPO} target="_blank">
-                    <GithubIcon class="fill-black dark:fill-white size-6" />
-                    Code
-                  </a>
-                </li>
-                {
-                  PREVIEW && (
-                    <li class="bg-slate-200 dark:bg-gray-900 hover:bg-primary-dark px-4 py-2 rounded-md">
-                      <a class="flex gap-2" href={PREVIEW}>
-                        <LinkIcon class="fill-black dark:fill-white size-4" />
-                        Preview
-                      </a>
-                    </li>
-                  )
-                }
-              </ul>
+
+              <div class="mt-10">
+                <div class="font-serif font-extrabold text-xl">Features</div>
+                <div class="mt-2 px-4">
+                  <ul>
+                    {
+                      FEATURES &&
+                        FEATURES.map((r) => (
+                          <li class="decoration-slice list-disc text-sm md:text-lg">
+                            {r}
+                          </li>
+                        ))
+                    }
+                  </ul>
+                </div>
+              </div>
+
+              <div class="mt-10">
+                <div class="font-serif font-extrabold text-xl">
+                  Technologies Used
+                </div>
+                <div class="mt-4">
+                  <div
+                    class="mt-2 grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] flex-wrap gap-5"
+                  >
+                    {
+                      TOOLS.map((s) => (
+                        <div class="w-fit flex items-center gap-2">
+                          <div class="group w-10 h-10 border-2 relative rounded-md border-slate-200 dark:border-[#484848] shadow-md hover:scale-110 hover:grayscale">
+                            <Image
+                              class="rounded-md absolute inset-0 m-auto"
+                              src={"/" + s.logo}
+                              alt={s.alt.toString()}
+                              loading="eager"
+                              width="30"
+                              height="30"
+                            />
+                          </div>
+                          <p class="w-max font-serif dark:text-white font-semibold">
+                            {s.alt}
+                          </p>
+                        </div>
+                      ))
+                    }
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

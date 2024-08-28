@@ -9,7 +9,10 @@ import AboutSection from "@components/about/AboutSection.astro";
 const translate = getI18n({ locale: Astro.currentLocale });
 ---
 
-<Layout title={translate.UI.title}>
+<Layout
+  title={translate["UI"]["title"]}
+  description={translate["ABOUT"]["SUMMARY"]}
+>
   <div>
     <div class="mb-14 container">
       <Iam />

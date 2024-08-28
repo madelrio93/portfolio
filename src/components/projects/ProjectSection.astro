@@ -14,11 +14,12 @@ const translate = getI18n({ locale: Astro.currentLocale });
           id={p.ID}
           title={p.TITLE}
           description={p.SUMARY}
+          image={p.IMAGE}
           tools={p.TOOLS}
           codeLink={p.REPO}
           previewLink={p.PREVIEW}
         >
-          <div slot="card-link" class="my-5 sm:my-0">
+          <div slot="card-link" class="my-5 sm:my-5">
             <a
               class="text-primary-light dark:text-primary-dark hover:text-primary-dark/70 hover:dark:text-primary-dark/70"
               href={`/project/${p.ID}`}
