@@ -146,8 +146,8 @@
     "TITLE": "PROYECTS",
     "ITEMS": [
       {
+        "ID": "12345678",
         "TITLE": "Lorem ipsum dolor sit amet.",
-        "IMAGE": "",
         "TOOLS": [
           {
             "logo": "react.png",
@@ -170,7 +170,38 @@
             "alt": "REST"
           }
         ],
-        "DESCRIPTION": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+        "SUMARY": "I contributed to 60% of the business modules, resolved bugs, promoted development best practices, and collaborated on new designs.",
+        "DESCRIPTION": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ullam odit nam harum reprehenderit architecto earum, ab exercitationem. Reprehenderit error quaerat laudantium dicta incidunt. Nisi aperiam numquam sit. Voluptatem itaque, temporibus nobis quibusdam molestias magnam. Beatae laboriosam error voluptatibus saepe vero rerum odit cumque numquam, dolore, magni sapiente recusandae cum ad dolor soluta, omnis facilis sint expedita animi eos iste magnam autem sequi. Dignissimos magnam hic nihil magni explicabo, ex aspernatur sed. Molestias nam, consectetur corporis est dicta asperiores quidem et saepe numquam nihil cum, eligendi alias iusto consequuntur voluptatibus maiores laudantium adipisci itaque assumenda officia? Corporis optio magnam delectus maiores culpa voluptas ex, adipisci autem enim voluptatibus! Ratione temporibus illum cupiditate veritatis ipsum iure blanditiis eaque fugit error eum. Blanditiis eveniet illum saepe itaque harum facere natus dolor eligendi iste neque aliquam, modi quo quod animi rem ad, voluptatibus quam porro non reiciendis? Saepe recusandae, odit dolorum aperiam, nesciunt earum molestiae consequatur officia laudantium quod, inventore quidem? Temporibus omnis aut maxime nostrum suscipit nobis vero quasi perferendis laudantium officiis magnam accusamus voluptate obcaecati officia, similique natus magni eveniet ipsum. Soluta dolorum accusantium pariatur perferendis maiores corporis! A distinctio ab quae quis delectus. Neque, sed molestias veritatis officia culpa earum? ",
+        "REPO": "a",
+        "PREVIEW": "a"
+      },
+      {
+        "ID": "123456789",
+        "TITLE": "Lorem ipsum dolor sit amet.",
+        "TOOLS": [
+          {
+            "logo": "react.png",
+            "alt": "React"
+          },
+          {
+            "logo": "ts.png",
+            "alt": "Typescript"
+          },
+          {
+            "logo": "mui.png",
+            "alt": "Material UI"
+          },
+          {
+            "logo": "aws.png",
+            "alt": "AWS Amplify"
+          },
+          {
+            "logo": "rest.png",
+            "alt": "REST"
+          }
+        ],
+        "SUMARY": "I contributed to 60% of the business modules, resolved bugs, promoted development best practices, and collaborated on new designs.",
+        "DESCRIPTION": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ullam odit nam harum reprehenderit architecto earum, ab exercitationem. Reprehenderit error quaerat laudantium dicta incidunt. Nisi aperiam numquam sit. Voluptatem itaque, temporibus nobis quibusdam molestias magnam. Beatae laboriosam error voluptatibus saepe vero rerum odit cumque numquam, dolore, magni sapiente recusandae cum ad dolor soluta, omnis facilis sint expedita animi eos iste magnam autem sequi. Dignissimos magnam hic nihil magni explicabo, ex aspernatur sed. Molestias nam, consectetur corporis est dicta asperiores quidem et saepe numquam nihil cum, eligendi alias iusto consequuntur voluptatibus maiores laudantium adipisci itaque assumenda officia? Corporis optio magnam delectus maiores culpa voluptas ex, adipisci autem enim voluptatibus! Ratione temporibus illum cupiditate veritatis ipsum iure blanditiis eaque fugit error eum. Blanditiis eveniet illum saepe itaque harum facere natus dolor eligendi iste neque aliquam, modi quo quod animi rem ad, voluptatibus quam porro non reiciendis? Saepe recusandae, odit dolorum aperiam, nesciunt earum molestiae consequatur officia laudantium quod, inventore quidem? Temporibus omnis aut maxime nostrum suscipit nobis vero quasi perferendis laudantium officiis magnam accusamus voluptate obcaecati officia, similique natus magni eveniet ipsum. Soluta dolorum accusantium pariatur perferendis maiores corporis! A distinctio ab quae quis delectus. Neque, sed molestias veritatis officia culpa earum? ",
         "REPO": "a",
         "PREVIEW": "a"
       }

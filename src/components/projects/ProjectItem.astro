@@ -2,8 +2,10 @@
 import GithubIcon from "@assets/icons/GithubIcon.astro";
 import LinkIcon from "@assets/icons/LinkIcon.astro";
 import { Image } from "astro:assets";
+import { fade } from "astro:transitions";
 
 interface Props {
+  id?: string;
   title: string;
   tools: { logo: string; alt: string }[];
   image?: string;
@@ -12,26 +14,32 @@ interface Props {
   previewLink?: string;
 }
 
-const { title, tools, image, description, codeLink, previewLink } = Astro.props;
+const { id, title, tools, image, description, codeLink, previewLink } =
+  Astro.props;
 ---
 
 <div
-  class="flex flex-wrap gap-5 md:gap-0 bg-paper-light dark:bg-paper-dark p-0 md:p-8 border border-slate-200 dark:border-[#484848] space-x-5 rounded"
+  class="flex flex-wrap gap-1 md:gap-0 bg-paper-light dark:bg-paper-dark p-0 md:p-8 border border-slate-200 dark:border-[#484848] space-x-5 rounded"
+  transition:animate={fade({ duration: "0.4s" })}
 >
-  <div class="w-2/5 p-4 md:p-0">
+  <div class="w-full p-4 sm:w-2/6 sm:p-0">
     <Image
-      class="bg-cover h-fit w-full"
+      transition:name={`${id}-image`}
+      class="object-cover w-full h-full max-w-80"
       src={"/" + (image ?? "no-img.png")}
       alt={title}
       loading="lazy"
-      width="100"
-      height="100"
+      width="50"
+      height="50"
     />
   </div>
 
   <div class="flex-1 flex justify-between flex-col">
     <div>
-      <div class="font-serif font-bold text-black dark:text-white text-lg">
+      <div
+        class="font-serif font-bold text-black dark:text-white text-lg"
+        transition:name={`${id}-project-title`}
+      >
         {title}
       </div>
       <div class="mt-2 flex gap-5">
@@ -62,7 +70,9 @@ const { title, tools, image, description, codeLink, previewLink } = Astro.props;
     </div>
     <div class="mt-4">
       <ul class="flex gap-5">
-        <li class="bg-slate-200 dark:bg-gray-900 hover:bg-primary-dark px-4 py-2 rounded-md">
+        <li
+          class="bg-slate-200 dark:bg-gray-900 hover:bg-primary-dark px-4 py-2 rounded-md"
+        >
           <a class="flex gap-2" href={codeLink} target="_blank">
             <GithubIcon class="fill-black dark:fill-white size-6" />
             Code
@@ -80,5 +90,7 @@ const { title, tools, image, description, codeLink, previewLink } = Astro.props;
         }
       </ul>
     </div>
+
+    <slot name="card-link" />
   </div>
 </div>
