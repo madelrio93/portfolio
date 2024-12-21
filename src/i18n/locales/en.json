@@ -26,7 +26,7 @@
     "EXPERIENCE": [
       {
         "ID": "12345678",
-        "TITLE": "Senior Frontend Developer",
+        "TITLE": "Full-stack Developer",
         "COMPANY": "Frameware Corp",
         "COMPANY_LOGO": "frameware.jpg",
         "DATE_RANGE": "January 2022 - May 2024",
@@ -38,11 +38,16 @@
           "Implemented application security through role management and route access via configuration, ensuring proper access to functionalities based on assigned permissions.",
           "Integrated capture and management of notifications sent by AWS, enhancing user communication and responsiveness.",
           "Created components and functionalities for file upload and download to AWS S3.",
+          "Designed, developed, and delivered end-to-end software solutions using React for the frontend and Java for backend services, ensuring performance, scalability, and security in a Scrum/Agile environment.",
           "Assisted in bug fixing and library version migrations.",
           "Promoted and shared development best practices and standards.",
           "Collaborated on the design of new build-outs."
         ],
         "SKILLS": [
+          {
+            "logo": "java.png",
+            "alt": "Java"
+          },
           {
             "logo": "react.png",
             "alt": "React"
@@ -80,6 +85,10 @@
           "Assisted in bug fixing and system deployment on institutional servers."
         ],
         "SKILLS": [
+          {
+            "name": "GraphQL",
+            "icon": "graphQL.png"
+          },
           {
             "logo": "apollo.png",
             "alt": "Apollo Client"

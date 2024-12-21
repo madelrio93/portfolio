@@ -9,7 +9,7 @@ interface Props {
   companyLogo?: string;
   dateRange: string;
   description: string;
-  skills: { logo: string; alt: string }[];
+  skills: { logo?: string; alt?: string }[];
   isLeftPosition?: boolean;
 }
 
@@ -76,7 +76,7 @@ const {
             <Image
               class="rounded-md absolute inset-0 m-auto"
               src={"/" + s.logo}
-              alt={s.alt.toString()}
+              alt={s.alt ? s.alt.toString() : ""}
               loading="eager"
               width="30"
               height="30"
