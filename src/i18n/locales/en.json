@@ -156,6 +156,42 @@
     "TITLE": "PROYECTS",
     "ITEMS": [
       {
+        "ID": "112345678",
+        "TITLE": "AI Chat UI (v1)",
+        "IMAGE": "aichat.png",
+        "TOOLS": [
+          {
+            "logo": "ts.png",
+            "alt": "Typescript"
+          },
+          {
+            "logo": "react.png",
+            "alt": "React"
+          },
+          {
+            "logo": "zustand.png",
+            "alt": "Zustand"
+          },
+          {
+            "logo": "tailwind.png",
+            "alt": "Tailwind Css"
+          }
+        ],
+        "SUMARY": "A lightweight and modern interface to interact with a conversational AI",
+        "DESCRIPTION": "This project is built to be easily integrated into any website as a chat widget. This is version 1, focused on simplicity, scalability, and a great user experience ",
+        "FEATURES": [
+          "Typing indicator for both user and system",
+          "Smart input component with debounced state handling",
+          "Modular and maintainable architecture",
+          "Clean, modern styling using Tailwind CSS",
+          "Global state management with Zustand",
+          "Ready to integrate with APIs like OpenAI",
+          "Unit testing support using Vitest"
+        ],
+        "REPO": "https://github.com/madelrio93/aichat.git",
+        "PREVIEW": "https://aichat-nu-six.vercel.app/"
+      },
+      {
         "ID": "12345678",
         "TITLE": "Translate Api (backend)",
         "IMAGE": "translate-api-b.png",
