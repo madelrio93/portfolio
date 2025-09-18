@@ -26,7 +26,7 @@ const translate = getI18n({ locale: Astro.currentLocale });
     <div class="flex justify-end items-center gap-10">
       <ToggleTheme />
 
-      <a href={translate["ABOUT"]["CONTACT"]["CV"]} class="btn hidden md:block">
+      <a target="_blank" href={translate["ABOUT"]["CONTACT"]["CV"]} class="btn hidden md:block">
         {translate["UI"]["button.cv"]}
       </a>
 
