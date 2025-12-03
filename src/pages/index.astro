@@ -5,17 +5,37 @@ import Iam from "@components/ui/Iam.astro";
 import ExperienceSection from "@components/experience/ExperienceSection.astro";
 import ProjectSection from "@components/projects/ProjectSection.astro";
 import AboutSection from "@components/about/AboutSection.astro";
-
+import SocialProfile from "@components/ui/SocialProfile.astro";
+import { getHomePageData, getSocialProfilesData } from "@lib/strapi";
 const translate = getI18n({ locale: Astro.currentLocale });
+
+const result = await getHomePageData();
+const { githubUrl, linkedinUrl, emailUrl } = await getSocialProfilesData();
+
+const data = result?.data ?? null;
 ---
 
 <Layout
-  title={translate["UI"]["title"]}
+  title={data?.title ?? ""}
   description={translate["ABOUT"]["SUMMARY"]}
+  socialProfile={{
+    githubUrl,
+    linkedinUrl,
+    emailUrl,
+  }}
 >
   <div>
     <div class="mb-14 container">
-      <Iam />
+      <Iam
+        name={data ? data["sections"][0].name : ""}
+        summary={data ? data["sections"][0].summary : ""}
+      >
+        <SocialProfile
+          githubUrl={githubUrl}
+          linkedinUrl={linkedinUrl}
+          emailUrl={emailUrl}
+        />
+      </Iam>
     </div>
 
     <ExperienceSection />
@@ -28,7 +48,9 @@ const translate = getI18n({ locale: Astro.currentLocale });
   .animate-on-scroll {
     opacity: 0;
     transform: translateY(4rem);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transition:
+      opacity 0.6s ease-out,
+      transform 0.6s ease-out;
   }
   .animate-on-scroll.is-visible {
     opacity: 1;

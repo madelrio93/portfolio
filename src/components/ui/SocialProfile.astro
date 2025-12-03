@@ -2,26 +2,20 @@
 import GithubIcon from "@assets/icons/GithubIcon.astro";
 import LinkedinIcon from "@assets/icons/LinkedinIcon.astro";
 import EmailIcon from "@assets/icons/EmailIcon.astro";
+
+const { githubUrl, linkedinUrl, emailUrl } = Astro.props;
 ---
 
 <ul class="flex gap-5">
   <li>
-    <a
-      href="https://github.com/madelrio93"
-      target="_blank"
-      aria-label="Github"
-    >
+    <a href={githubUrl} target="_blank" aria-label="Github">
       <GithubIcon
         class="fill-black dark:fill-white size-6 hover:fill-primary-light dark:hover:fill-primary-dark duration-500"
       />
     </a>
   </li>
   <li>
-    <a
-      href="https://www.linkedin.com/in/marcelo-del-rio-b912b622b/"
-      target="_blank"
-      aria-label="Linkedin"
-    >
+    <a href={linkedinUrl} target="_blank" aria-label="Linkedin">
       <LinkedinIcon
         class="fill-black dark:fill-white size-6 hover:fill-primary-light dark:hover:fill-primary-dark duration-500"
       />
@@ -29,7 +23,9 @@ import EmailIcon from "@assets/icons/EmailIcon.astro";
   </li>
   <li>
     <a
-      href="mailto:madelrio93@gmail.com"
+      href={emailUrl}
+      target="_blank"
+      rel="noreferrer noopener"
       aria-label="Email"
     >
       <EmailIcon

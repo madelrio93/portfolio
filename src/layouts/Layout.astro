@@ -5,13 +5,20 @@ import "@assets/styles/global.css";
 import Header from "@components/ui/Header.astro";
 import Footer from "@components/ui/Footer.astro";
 import { ViewTransitions } from "astro:transitions";
+import SocialProfile from "@components/ui/SocialProfile.astro";
+
 
 interface Props {
   title: string;
   description: string;
+  socialProfile: {
+    githubUrl: string;
+    linkedinUrl: string;
+    emailUrl: string;
+  };
 }
 
-const { title, description } = Astro.props;
+const { title, description, socialProfile} = Astro.props;
 ---
 
 <!doctype html>
@@ -33,7 +40,13 @@ const { title, description } = Astro.props;
       <slot />
     </main>
 
-    <Footer />
+    <Footer>
+      <SocialProfile
+        githubUrl={socialProfile.githubUrl}
+        linkedinUrl={socialProfile.linkedinUrl}
+        emailUrl={socialProfile.emailUrl}
+      />
+    </Footer>
   </body>
 </html>
 <style is:global>

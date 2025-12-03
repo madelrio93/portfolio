@@ -3,6 +3,8 @@ import { getI18n } from "@i18n/index";
 import SocialProfile from "./SocialProfile.astro";
 
 const translate = getI18n({ locale: Astro.currentLocale });
+
+const { name, summary } = Astro.props;
 ---
 
 <div
@@ -13,12 +15,12 @@ const translate = getI18n({ locale: Astro.currentLocale });
     class="text-black dark:text-white font-extrabold font-serif text-3xl sm:text-4xl md:text-6xl"
   >
     <span class="text-primary-dark">{translate["ABOUT"].IAM}</span>
-    {translate["ABOUT"].NAME}
+    {name}
   </h1>
   <p class="text-sm mt-5">
-    {translate["ABOUT"].SUMMARY}
+    {summary}
   </p>
   <div class="mt-7">
-    <SocialProfile />
+    <slot />
   </div>
 </div>
