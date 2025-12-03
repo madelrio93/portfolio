@@ -27,7 +27,6 @@ const getSocialProfilesData = async () => {
 
 const getStrapiData = async (endpoint: string) => {
   try {
-    console.log(`${STRAPI_API_URL}/${endpoint}`);
     const response = await fetch(`${STRAPI_API_URL}/${endpoint}`);
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
