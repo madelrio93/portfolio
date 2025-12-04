@@ -26,7 +26,16 @@ const {
 } = Astro.props;
 ---
 
-<Layout title={`</> ${TITLE}`} transition:name={ID} description={SUMARY}>
+<Layout
+  title={`</> ${TITLE}`}
+  transition:name={ID}
+  description={SUMARY}
+  socialProfile={{
+    githubUrl: "",
+    linkedinUrl: "",
+    emailUrl: "",
+  }}
+>
   <div
     class="container min-h-[calc(100vh-11.25rem)]"
     transition:animate={fade({ duration: "0.4s" })}
